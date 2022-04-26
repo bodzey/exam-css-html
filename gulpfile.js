@@ -84,7 +84,9 @@ function css() {
 		.pipe(sass())
 
 		.pipe(autoprefixer({
-			cascade: true
+			grid: false,
+			overrideBrowserslist: ["last 8 versions"],
+			cascade: true,
 		}))
 
 		.pipe(cssbeautify())
