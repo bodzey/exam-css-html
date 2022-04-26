@@ -1,0 +1,26 @@
+{
+	"name": "gulp-template",
+	"version": "0.2.0",
+	"description": "Minimal Gulp template for comfortable work",
+	"main": "index.html",
+	"author": "Bodzey",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "latest",
+		"del": "latest",
+		"gulp": "latest",
+		"gulp-autoprefixer": "latest",
+		"gulp-cssbeautify": "latest",
+		"gulp-cssnano": "latest",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-notifier": "latest",
+		"gulp-plumber": "latest",
+		"gulp-rename": "latest",
+		"gulp-rigger": "latest",
+		"gulp-sass": "latest",
+		"gulp-strip-css-comments": "latest",
+		"gulp-uglify": "latest",
+		"panini": "latest",
+		"sass": "latest"
+	}
+}

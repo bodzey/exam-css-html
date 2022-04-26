@@ -1,0 +1,118 @@
+.about {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include adaptiv-value(gap, 130, 50, 0);
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+			padding-top: 5rem;
+		}
+	}
+
+	&__images {
+		flex: 1 1 50%;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+		@include adaptiv-value(gap, 20, 5, 0);
+		grid-auto-flow: row;
+		grid-template-areas:
+			"img-1 img-2"
+			"img-1 img-2"
+			"img-1 img-4"
+			"img-3 img-4"
+			"img-3 img-4";
+
+		position: relative;
+
+		.img-1 {
+			grid-area: img-1;
+		}
+
+		.img-4 {
+			grid-area: img-4;
+		}
+
+		.img-2 {
+			grid-area: img-2;
+		}
+
+		.img-3 {
+			grid-area: img-3;
+		}
+
+		&-verified {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			@include adaptiv-value(gap, 5, 1, 0);
+			@include adaptiv-value(width, 168, 100, 0);
+			@include adaptiv-value(height, 168, 100, 0);
+			color: $colorTwo;
+			background-color: #fff;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			transform: translate(-50%, -50%);
+			img {
+				width: 50%;
+				height: 50%;
+				object-fit: contain;
+			}
+
+			span {
+				@include adaptiv-font(16, 10);
+				font-weight: 500;
+			}
+		}
+	}
+	&__content {
+		flex: 1 1 50%;
+		display: flex;
+		min-height: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		align-self: flex-start;
+
+		@media screen and (max-width: 767px) {
+			width: 75%;
+			margin: 0 auto;
+			order: -1;
+			text-align: justify;
+		}
+	}
+
+	&__text {
+		// max-width: 42.5rem;
+		@include adaptiv-font(16, 14);
+		line-height: 1.8;
+		color: $textDark;
+
+		@include adaptiv-value(margin-bottom, 16, 10, 0);
+		&--bold {
+			font-weight: 500;
+		}
+	}
+
+	&__counts {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		@include adaptiv-value(margin-bottom, 32, 18, 0);
+	}
+	&__count {
+		@include adaptiv-font(20, 18);
+		font-weight: 700;
+		line-height: 1.7;
+		color: $colorTwo;
+	}
+}

@@ -1,0 +1,33 @@
+.section {
+	&--intro {
+		position: relative;
+		z-index: 100;
+		background-color: $colorOne;
+	}
+	&--about {
+		@include adaptiv-value(padding-top, 100, 20, 0);
+		@include adaptiv-value(padding-bottom, 100, 20, 0);
+	}
+	&--services {
+		@include adaptiv-value(padding-bottom, 100, 20, 0);
+
+		.section__tittle {
+			text-align: center;
+		}
+	}
+
+	&__tittle {
+		@include adaptiv-font(24, 18);
+		color: $colorTwo;
+		font-weight: 700;
+		line-height: 1.7;
+
+		@include adaptiv-value(margin-bottom, 16, 10, 0);
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 2rem;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
