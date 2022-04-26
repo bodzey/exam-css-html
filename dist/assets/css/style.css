@@ -79,6 +79,7 @@ button {
     padding-left: calc(5px + 10 * ((100vw - 320px) / 1120));
     padding-right: calc(5px + 10 * ((100vw - 320px) / 1120));
     margin: 0 auto;
+    height: 100%;
 }
 
 .btn {
@@ -152,6 +153,12 @@ button {
     transition: background 0.2s linear, padding 0.2s linear;
 }
 
+@media screen and (max-width: 767px) {
+    .header {
+        height: 9rem;
+    }
+}
+
 .header--dark {
     padding-top: 0;
     background-color: #023957;
@@ -161,6 +168,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .header__logo-text {
@@ -192,7 +200,7 @@ button {
 @media screen and (max-width: 767px) {
     .header__nav-list {
         width: 100%;
-        min-height: 75vh;
+        min-height: calc(100vh - 90px);
         flex-direction: column;
         align-items: flex-end;
         padding: 1rem;

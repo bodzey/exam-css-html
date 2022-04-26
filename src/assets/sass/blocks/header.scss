@@ -13,6 +13,9 @@
 
 	transition: background 0.2s linear, padding 0.2s linear;
 
+	@media screen and (max-width: 767px) {
+		height: 9rem;
+	}
 	&--dark {
 		padding-top: 0;
 		background-color: $colorOne;
@@ -21,6 +24,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		height: 100%;
 	}
 	&__logo {
 		&-text {
@@ -49,7 +53,7 @@
 
 			@media screen and (max-width: 767px) {
 				width: 100%;
-				min-height: 75vh;
+				min-height: calc(100vh - 90px);
 				flex-direction: column;
 				align-items: flex-end;
 				padding: 1rem;
