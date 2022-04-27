@@ -68,9 +68,7 @@ button {
 
 	cursor: pointer;
 }
-.page {
-	overflow-y: hidden;
-}
+
 .container {
 	max-width: 1330px;
 	@include adaptiv-value(padding-left, 15, 5, 0);

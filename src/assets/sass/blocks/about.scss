@@ -90,7 +90,6 @@
 	}
 
 	&__text {
-		// max-width: 42.5rem;
 		@include adaptiv-font(16, 14);
 		line-height: 1.8;
 		color: $textDark;
