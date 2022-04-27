@@ -2,8 +2,8 @@
 
 $(function () {
 
-	/* Nav Toogle
-	 ==========================*/
+	//* Nav Toogle
+
 	let navToggle = $('#navToggle')
 	let nav = $('#nav')
 	let body = $('#body')
@@ -23,10 +23,10 @@ $(function () {
 		nav.removeClass('show')
 	})
 
-	/* Header BG
-	 ==========================*/
+	//* Header BG
+
 	let header = $(".header");
-	let scrollChange = 100;
+	let scrollChange = 5;
 	$(window).scroll(function () {
 		var scroll = $(window).scrollTop();
 

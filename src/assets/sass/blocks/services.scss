@@ -54,11 +54,13 @@
 			z-index: 2;
 		}
 
-		&:hover {
+		&:hover,
+		&:active {
 			color: #fff;
 		}
 
-		&:hover::after {
+		&:hover::after,
+		&:active::after {
 			opacity: 0.8;
 		}
 
@@ -97,7 +99,8 @@
 
 			transition: fill 0.2s linear;
 		}
-		&:hover path {
+		&:hover path,
+		&:active path {
 			fill: #fff;
 		}
 	}

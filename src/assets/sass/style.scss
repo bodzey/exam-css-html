@@ -95,7 +95,8 @@ button {
 
 	background-image: linear-gradient(104.58deg, $colorTwo 10.57%, $colorTree 96.62%);
 
-	&:hover {
+	&:hover,
+	&:active {
 		background-image: linear-gradient(104.58deg, lighten($colorTwo, 10%) 10.57%, lighten($colorTree, 10%) 96.62%);
 	}
 

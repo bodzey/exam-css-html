@@ -85,7 +85,7 @@ function css() {
 
 		.pipe(autoprefixer({
 			grid: false,
-			overrideBrowserslist: ["last 8 versions"],
+			overrideBrowserslist: ["last 3в versions"],
 			cascade: true,
 		}))
 
