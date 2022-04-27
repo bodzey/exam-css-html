@@ -71,10 +71,6 @@ button {
     cursor: pointer;
 }
 
-.page {
-    overflow-y: hidden;
-}
-
 .container {
     max-width: 1330px;
     padding-left: calc(5px + 10 * ((100vw - 320px) / 1120));
