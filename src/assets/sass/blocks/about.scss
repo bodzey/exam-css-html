@@ -113,6 +113,7 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
+		gap: 2rem;
 
 		@include adaptiv-value(margin-bottom, 32, 18, 0);
 	}

@@ -53,6 +53,8 @@
 		padding-top: 9rem;
 
 		@media screen and (max-width: 639px), (max-height: 580px) {
+			// min-height: calc(100vh - 120px);
+
 			align-items: center;
 			text-align: center;
 		}
