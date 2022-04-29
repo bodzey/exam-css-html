@@ -10,7 +10,7 @@ $(function () {
 
 	navToggle.on('click', function (event) {
 		event.preventDefault()
-
+		$(this).toggleClass('active')
 		$('body').toggleClass('show-nav')
 		nav.toggleClass('show')
 		body.toggleClass('no-scroll')
