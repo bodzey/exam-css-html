@@ -38,6 +38,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: #333;
+	image-rendering: optimizeQuality;
 
 	transition: all 0.2s linear;
 }

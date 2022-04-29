@@ -41,6 +41,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #333;
+    image-rendering: optimizeQuality;
     -webkit-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
@@ -501,8 +502,6 @@ button {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    background-image: -o-linear-gradient(15.05deg, #000 9.46%, #056088 97.16%);
-    background-image: linear-gradient(74.95deg, #000 9.46%, #056088 97.16%);
 }
 
 .intro__inner {
@@ -818,6 +817,9 @@ button {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 96, 136, 0.8)), to(rgba(2, 57, 87, 0.8))), url(../img/services/card-bg.jpg);
     background: -o-linear-gradient(top, rgba(5, 96, 136, 0.8) 0%, rgba(2, 57, 87, 0.8) 100%), url(../img/services/card-bg.jpg);
     background: linear-gradient(180deg, rgba(5, 96, 136, 0.8) 0%, rgba(2, 57, 87, 0.8) 100%), url(../img/services/card-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     opacity: 0;
     -webkit-transition: opacity 0.2s linear, -webkit-box-shadow 0.2s linear;
     transition: opacity 0.2s linear, -webkit-box-shadow 0.2s linear;
