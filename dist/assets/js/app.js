@@ -2,17 +2,18 @@
 
 $(function () {
 
-	/* Nav Toogle
-	 ==========================*/
+	// Nav Toogle
+
 	let navToggle = $('#navToggle')
 	let nav = $('#nav')
+	let body = $('#body')
 
 	navToggle.on('click', function (event) {
 		event.preventDefault()
 
 		$('body').toggleClass('show-nav')
-		$(this).toggleClass('active')
 		nav.toggleClass('show')
+		body.toggleClass('no-scroll')
 	})
 
 	$(window).on("resize", function () {
@@ -21,12 +22,12 @@ $(function () {
 		nav.removeClass('show')
 	})
 
-	/* Header BG
-	 ==========================*/
+	// Header BG
+
 	let header = $(".header");
-	let scrollChange = 100;
+	let scrollChange = 5;
 	$(window).scroll(function () {
-		var scroll = $(window).scrollTop();
+		let scroll = $(window).scrollTop();
 
 		if (scroll >= scrollChange) {
 			header.addClass('header--dark');
