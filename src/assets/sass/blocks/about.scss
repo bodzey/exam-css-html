@@ -44,6 +44,12 @@
 		.img-3 {
 			grid-area: img-3;
 		}
+		.img-1,
+		.img-2,
+		.img-3,
+		.img-4 {
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+		}
 
 		&-verified {
 			display: flex;
@@ -60,8 +66,10 @@
 			top: 50%;
 			left: 50%;
 
+			box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+
 			transform: translate(-50%, -50%);
-			img {
+			svg {
 				width: 50%;
 				height: 50%;
 				object-fit: contain;

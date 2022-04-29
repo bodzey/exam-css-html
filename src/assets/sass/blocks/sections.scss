@@ -4,15 +4,36 @@
 		z-index: 100;
 		background-color: $colorOne;
 	}
+
 	&--about {
 		@include adaptiv-value(padding-top, 100, 20, 0);
 		@include adaptiv-value(padding-bottom, 100, 20, 0);
 	}
+
 	&--services {
 		@include adaptiv-value(padding-bottom, 100, 20, 0);
 
 		.section__tittle {
 			text-align: center;
+		}
+	}
+
+	&--works {
+		@include adaptiv-value(padding-top, 170, 90, 0);
+		margin-top: -7rem;
+
+		background: linear-gradient(180deg, rgba(5, 96, 136, 0.9) 0%, rgba(2, 57, 87, 0.9) 100%), url(../img/works-bg.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		.section__tittle {
+			color: #fff;
+			text-align: center;
+		}
+
+		.section__text {
+			color: #fff;
 		}
 	}
 
@@ -29,5 +50,13 @@
 			width: 100%;
 			text-align: center;
 		}
+	}
+	&__text {
+		@include adaptiv-value(max-width, 370, 250, 0);
+		margin: 0 auto;
+		@include adaptiv-font(16, 12);
+		text-align: center;
+
+		@include adaptiv-value(margin-bottom, 32, 18, 0);
 	}
 }

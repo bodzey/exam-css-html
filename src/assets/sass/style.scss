@@ -37,6 +37,8 @@ body {
 	font-size: 10px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	transition: all 0.2s linear;
 }
 
 body {
@@ -53,13 +55,9 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-
-	&.posab {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
+	object-position: center;
 }
+
 button {
 	font-family: inherit;
 	border: none;
@@ -79,6 +77,12 @@ button {
 
 	// border-left: 1px solid #000;
 	// border-right: 1px solid #000;
+	@media screen and (min-width: 2500px) {
+		max-width: 2000px;
+	}
+	@media screen and (min-width: 2500px) {
+		max-width: 3000px;
+	}
 }
 
 .btn {
@@ -93,6 +97,8 @@ button {
 
 	background-image: linear-gradient(104.58deg, $colorTwo 10.57%, $colorTree 96.62%);
 
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
 	&:hover,
 	&:active {
 		background-image: linear-gradient(104.58deg, lighten($colorTwo, 10%) 10.57%, lighten($colorTree, 10%) 96.62%);
@@ -101,6 +107,28 @@ button {
 	&--more {
 		@media screen and (max-width: 767px) {
 			align-self: center;
+		}
+	}
+	&--works {
+		align-self: flex-end;
+
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			@include adaptiv-value(width, 715, 100, 0);
+			height: 2px;
+
+			background: linear-gradient(to top, $colorTwo, $colorTree);
+
+			position: absolute;
+			top: 50%;
+			right: 130%;
+
+			pointer-events: none;
+
+			transform: translateY(-50%);
 		}
 	}
 }
@@ -112,3 +140,4 @@ button {
 @import "blocks/about";
 @import "blocks/services";
 @import "blocks/benefits";
+@import "blocks/works";

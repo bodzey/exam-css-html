@@ -28,7 +28,7 @@ let path = {
 	},
 	src: {
 		html: "src/*.html",
-		js: "src/assets/js/*.js",
+		js: "src/assets/js/**/*.js",
 		css: "src/assets/sass/style.scss",
 		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
 	},
@@ -85,7 +85,7 @@ function css() {
 
 		.pipe(autoprefixer({
 			grid: false,
-			overrideBrowserslist: ["last 3в versions"],
+			overrideBrowserslist: ["last 3 versions"],
 			cascade: true,
 		}))
 

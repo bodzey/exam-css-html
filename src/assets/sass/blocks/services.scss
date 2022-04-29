@@ -2,14 +2,7 @@
 	&__inner {
 		color: $textDark;
 	}
-	&__text {
-		@include adaptiv-value(max-width, 370, 250, 0);
-		margin: 0 auto;
-		@include adaptiv-font(16, 12);
-		text-align: center;
 
-		@include adaptiv-value(margin-bottom, 32, 18, 0);
-	}
 	&__cards {
 		display: grid;
 		grid-template: 1fr / repeat(4, 1fr);
@@ -50,13 +43,14 @@
 			left: 0;
 			background: linear-gradient(180deg, rgba(5, 96, 136, 0.8) 0%, rgba(2, 57, 87, 0.8) 100%), url(../img/services/card-bg.jpg);
 			opacity: 0;
-			transition: opacity 0.2s linear;
+			transition: opacity 0.2s linear, box-shadow 0.2s linear;
 			z-index: 2;
 		}
 
 		&:hover,
 		&:active {
 			color: #fff;
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 		}
 
 		&:hover::after,
