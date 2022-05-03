@@ -18,6 +18,15 @@
 		}
 	}
 
+	&--feedbacks {
+		.section__tittle {
+			text-align: left;
+			color: $colorTwo;
+		}
+		.section__text {
+			text-align: left;
+		}
+	}
 	&--works {
 		@include adaptiv-value(padding-top, 170, 90, 0);
 		margin-top: -7rem;
