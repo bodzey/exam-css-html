@@ -150,6 +150,7 @@ button {
     display: block;
     width: 10rem;
     height: 10rem;
+    padding: 0;
     background: #056088;
     border-radius: 50%;
     position: absolute;
@@ -1310,14 +1311,8 @@ button {
 }
 
 .partners__video-preview {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     width: 1080px;
-    height: calc(133px + 379 * ((100vw - 320px) / 1120));
+    height: 512px;
     margin: 0 auto;
     position: relative;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
@@ -1327,6 +1322,12 @@ button {
 @media (max-width: 1300px) {
     .partners__video-preview {
         width: calc(280px + 800 * ((100vw - 320px) / 980));
+    }
+}
+
+@media (max-width: 1300px) {
+    .partners__video-preview {
+        height: calc(133px + 379 * ((100vw - 320px) / 980));
     }
 }
 
