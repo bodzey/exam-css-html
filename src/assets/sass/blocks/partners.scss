@@ -32,7 +32,7 @@
 		&-preview {
 			align-items: center;
 			justify-content: center;
-			@include adaptiv-value(width, 1080, 280, 0);
+			@include adaptiv-value(width, 1080, 280, 1);
 			@include adaptiv-value(height, 512, 133, 0);
 			margin: 0 auto;
 

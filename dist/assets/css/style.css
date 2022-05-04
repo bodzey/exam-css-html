@@ -1316,12 +1316,18 @@ button {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: calc(280px + 800 * ((100vw - 320px) / 1120));
+    width: 1080px;
     height: calc(133px + 379 * ((100vw - 320px) / 1120));
     margin: 0 auto;
     position: relative;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1300px) {
+    .partners__video-preview {
+        width: calc(280px + 800 * ((100vw - 320px) / 980));
+    }
 }
 
 .partners__video-description {
