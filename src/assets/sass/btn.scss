@@ -1,0 +1,79 @@
+.btn {
+	font-size: 1.6rem;
+	@include adaptiv-font(16, 14);
+	font-weight: 500;
+	color: #fff;
+	@include adaptiv-value(padding-top, 22, 15, 0);
+	@include adaptiv-value(padding-bottom, 22, 15, 0);
+	@include adaptiv-value(padding-left, 34, 22, 0);
+	@include adaptiv-value(padding-right, 34, 22, 0);
+
+	background-image: linear-gradient(104.58deg, $colorTwo 10.57%, $colorTree 96.62%);
+
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+	&:hover,
+	&:active {
+		background-image: linear-gradient(104.58deg, lighten($colorTwo, 10%) 10.57%, lighten($colorTree, 10%) 96.62%);
+	}
+
+	&--more {
+		@media screen and (max-width: 767px) {
+			align-self: center;
+		}
+	}
+	&--works {
+		align-self: flex-end;
+
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			@include adaptiv-value(width, 715, 100, 0);
+			height: 2px;
+
+			background: linear-gradient(to top, $colorTwo, $colorTree);
+
+			position: absolute;
+			top: 50%;
+			right: 130%;
+
+			pointer-events: none;
+
+			transform: translateY(-50%);
+		}
+	}
+
+	&--play {
+		display: block;
+		width: 10rem;
+		height: 10rem;
+
+		background: $colorTwo;
+		border-radius: 50%;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+
+		&::after {
+			content: "";
+			display: inline-block;
+
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 20px 0 20px 30px;
+			border-color: transparent transparent transparent #fff;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			transform: translate(-40%, -50%);
+		}
+	}
+}

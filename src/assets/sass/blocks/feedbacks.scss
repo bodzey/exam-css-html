@@ -4,13 +4,33 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
+
+		max-height: 40rem;
+		height: 100%;
+
+		@media screen and (max-width: 380px) {
+			flex-direction: column;
+			align-items: stretch;
+			// gap: 5rem;
+		}
 	}
 
 	&__item {
 		flex: 1 1 30%;
+		height: 100%;
 		background-color: #fff;
 
 		padding: 5rem 3rem;
+
+		&-wrapper {
+			display: flex;
+			height: 100%;
+
+			position: relative;
+		}
+
+		@media screen and (max-width: 380px) {
+		}
 	}
 
 	&__content {
@@ -25,22 +45,76 @@
 
 		position: relative;
 
-		&-text-wrapper {
-			max-width: 41rem;
-			min-height: 26rem;
-			background: linear-gradient(1.17deg, $colorOne -19.65%, $colorTwo 93.67%);
-
-			padding: 6rem;
+		&::after {
+			content: "";
+			display: block;
+			width: 2.4rem;
+			height: 100%;
+			background-color: #fff;
 
 			position: absolute;
-			bottom: -25%;
+			bottom: 0;
+			left: -2.4rem;
+
+			z-index: 1;
+		}
+
+		@media screen and (max-width: 380px) {
+		}
+
+		&-wrapper {
+			max-width: 41rem;
+			min-height: 26rem;
+
+			position: absolute;
+			bottom: -20%;
 			right: 0;
+
+			z-index: 10;
+
+			@media screen and (max-width: 767px) {
+				// bottom: 0;
+			}
+
+			@media screen and (max-width: 380px) {
+				position: sticky;
+			}
+		}
+
+		&-inner {
+			width: 100%;
+			height: 100%;
+
+			padding-top: 6rem;
+			padding-left: 5rem;
+			padding-right: 2.5rem;
+			padding-bottom: 3rem;
+
+			background: linear-gradient(1.17deg, $colorOne -19.65%, $colorTwo 93.67%);
+
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
+			position: relative;
+		}
+		&-avatar {
+			width: 10rem;
+			height: 10rem;
+
+			border-radius: 50%;
+			overflow: hidden;
+
+			position: absolute;
+			top: -12%;
+			left: -10%;
+
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 		}
 		&-text,
 		&-author {
 			font-style: italic;
 			color: #fff;
-			font-size: 1.6rem;
+			// font-size: 1.6rem;
+			@include adaptiv-font(16, 12);
 			line-height: 1.7;
 		}
 		&-text {

@@ -15,7 +15,7 @@
 	&__images {
 		// Vars for grid-template
 		$startSize: 60;
-		$minSize: 20;
+		$minSize: 50;
 		$addSize: $startSize - $minSize;
 
 		flex: 1 1 50%;
@@ -24,7 +24,7 @@
 		grid-template-columns: 1fr 1fr;
 		// grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-rows: repeat(5, minmax(auto, calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))));
-		@include adaptiv-value(gap, 20, 5, 0);
+		@include adaptiv-value(gap, 20, 10, 0);
 		grid-auto-flow: row;
 		grid-template-areas:
 			"img-1 img-2"

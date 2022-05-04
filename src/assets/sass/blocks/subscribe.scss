@@ -1,0 +1,16 @@
+.subscribe {
+	padding-bottom: 10rem;
+	&__inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		padding: 5.5rem;
+
+		background: linear-gradient(360deg, rgba(2, 57, 87, 0.8) 0%, rgba(5, 96, 136, 0.8) 112.47%), url(../img/subscribe-bg.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
