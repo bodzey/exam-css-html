@@ -78,13 +78,17 @@ button {
 	margin: 0 auto;
 	height: 100%;
 
-	// border-left: 1px solid #000;
-	// border-right: 1px solid #000;
 	@media screen and (min-width: 2500px) {
 		max-width: 2000px;
 	}
 	@media screen and (min-width: 2500px) {
 		max-width: 3000px;
+	}
+
+	&--footer {
+		@media screen and (max-width: 767px) {
+			padding: 0;
+		}
 	}
 }
 
@@ -101,3 +105,4 @@ button {
 @import "blocks/feedbacks";
 @import "blocks/partners";
 @import "blocks/subscribe";
+@import "blocks/footer";

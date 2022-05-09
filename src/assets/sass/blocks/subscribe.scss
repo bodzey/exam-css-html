@@ -13,4 +13,55 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+
+	&__tittle {
+		max-width: 74rem;
+		@include adaptiv-font(52, 20);
+		font-weight: 700;
+		line-height: 1.5;
+		text-align: center;
+		color: #fff;
+
+		margin-bottom: 1.2rem;
+	}
+
+	&__text {
+		max-width: 52rem;
+		@include adaptiv-font(16, 12);
+		line-height: 1.7;
+		text-align: center;
+		color: #fff;
+
+		margin-bottom: 3.2rem;
+	}
+	&__input-wrapper {
+		display: flex;
+		max-height: 6.2rem;
+		max-width: 64rem;
+		width: 100%;
+	}
+	&__form {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+
+		flex: 1 1 100%;
+
+		input {
+			flex: 1 1 80%;
+			font-family: "Poppins", sans-serif;
+
+			padding: 1.8rem 3rem;
+
+			outline: none;
+
+			&::placeholder {
+				font-family: inherit;
+				font-weight: 500;
+				font-size: 1.4rem;
+				line-height: 1.7;
+				opacity: 0.8;
+			}
+		}
+	}
 }

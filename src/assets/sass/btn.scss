@@ -2,6 +2,7 @@
 	font-size: 1.6rem;
 	@include adaptiv-font(16, 14);
 	font-weight: 500;
+	line-height: 1;
 	color: #fff;
 	@include adaptiv-value(padding-top, 22, 15, 0);
 	@include adaptiv-value(padding-bottom, 22, 15, 0);
@@ -75,5 +76,13 @@
 
 			transform: translate(-40%, -50%);
 		}
+	}
+
+	&--submit {
+		flex: 1 1 20%;
+	}
+
+	&--footer {
+		padding: 2rem;
 	}
 }

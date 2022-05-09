@@ -24,18 +24,21 @@ let path = {
 		html: "dist/",
 		js: "dist/assets/js/",
 		css: "dist/assets/css/",
+		vendor_css: "dist/assets/css/vendor",
 		images: "dist/assets/img/"
 	},
 	src: {
 		html: "src/*.html",
 		js: "src/assets/js/**/*.js",
 		css: "src/assets/sass/style.scss",
+		vendor_css: "src/assets/css/vendor/*.css",
 		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
 	},
 	watch: {
 		html: "src/**/*.html",
 		js: "src/assets/js/**/*.js",
 		css: "src/assets/sass/**/*.scss",
+		vendor_css: "src/assets/css/vendor/*.css",
 		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
 	},
 	clean: "./dist"
@@ -106,6 +109,31 @@ function css() {
 		.pipe(browsersync.stream());
 }
 
+function vendor_css() {
+	return src(path.src.vendor_css, { base: "src/assets/css/vendor" })
+		.pipe(plumber({
+			errorHandler: function (err) {
+				notify.onError(("Error: <%= error.message %>"))(err)
+				this.emit('end')
+			}
+		}))
+		.pipe(cssbeautify())
+		.pipe(dest(path.build.vendor_css))
+		.pipe(cssnano({
+			zindex: false,
+			discardComments: {
+				removeAll: true
+			}
+		}))
+		.pipe(removeComments())
+		.pipe(rename({
+			suffix: ".min",
+			extname: ".css"
+		}))
+		.pipe(dest(path.build.vendor_css))
+		.pipe(browsersync.stream());
+}
+
 function js() {
 	return src(path.src.js, { base: './src/assets/js/' })
 		.pipe(plumber())
@@ -133,11 +161,12 @@ function clean() {
 function watchFiles() {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
+	gulp.watch([path.watch.vendor_css], vendor_css);
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.images], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images));
+const build = gulp.series(clean, gulp.parallel(html, vendor_css, css, js, images));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 
@@ -145,6 +174,7 @@ const watch = gulp.parallel(build, watchFiles, browserSync);
 /* Exports Tasks */
 exports.html = html;
 exports.css = css;
+exports.vendor_css = vendor_css;
 exports.js = js;
 exports.images = images;
 exports.clean = clean;

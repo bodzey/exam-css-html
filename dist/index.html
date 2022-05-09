@@ -5,9 +5,8 @@
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
-	<link rel="stylesheet" href="assets/css/style.min.css">
-	
-	<!-- Useful meta tags -->
+	<link rel="stylesheet" href="./assets/css/vendor/animate.min.css">
+	<link rel="stylesheet" href="./assets/css/style.min.css">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow, noodp">
@@ -16,19 +15,17 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-	
+	<script type="text/javascript" src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="./assets/js/vendor/wow.min.js"></script>
 	<title>DB-: Home</title>
 </head>
 
 <body id="body">
-
-	
 	<div class="page">
-	
 		<header class="header">
 			<div class="container">
 				<div class="header__inner">
-					<div class="header__logo"><span class="header__logo-text">DB-</span></div>
+					<div class="header__logo"><a href="./index.html"><span class="header__logo-text">DB-</span></a></div>
 					<nav class="header__nav">
 						<ul class="header__nav-list" id="nav">
 							<li class="header__nav-item"><a href="" class="header__nav-link">Home</a></li>
@@ -46,24 +43,20 @@
 						<span class="header__burger-line">2</span>
 						<span class="header__burger-line">3</span>
 						<span class="header__burger-line">4</span>
-		
 					</button>
 				</div>
 			</div>
 		</header>
-	
 		<main class="main">
-	
 			<section class="section section--intro">
 				<div class="intro">
 					<div class="container container--intro">
 						<div class="intro__inner">
-							<h1 class="intro__tittle">We build your dream house well and professionally</h1>
+							<h1 class="intro__tittle wow slideInLeft">We build your dream house well and professionally</h1>
 							<p class="intro__text">Our team can build a house according to your wishes. Any design and concept, we will help make it happen</p>
 							<button class="btn btn--intro" type="button">Contact us</button>
 						</div>
 					</div>
-			
 				</div>
 				<div class="intro__bg">
 					<div class="intro__bg-wrapper">
@@ -71,7 +64,6 @@
 					</div>
 				</div>
 			</section>
-	
 			<section class="section section--about">
 				<div class="about">
 					<div class="container">
@@ -113,14 +105,12 @@
 					</div>
 				</div>
 			</section>
-	
 			<section class="section section--services">
 				<div class="services">
 					<div class="container">
 						<div class="services__inner">
 							<h2 class="section__tittle">Our services</h2>
 							<p class="section__text">Our services include building new buildings and renovating old buildings</p>
-			
 							<div class="services__cards">
 								<div class="services__card">
 									<div class="services__card-img">
@@ -163,7 +153,6 @@
 					</div>
 				</div>
 			</section>
-	
 			<section class="section section--benefits">
 				<div class="benefits">
 					<div class="container">
@@ -203,14 +192,12 @@
 					</div>
 				</div>
 			</section>
-	
 			<section class="section section--works">
 				<div class="works">
 					<div class="container">
 						<div class="works__inner">
 							<h2 class="section__tittle">Our works</h2>
 							<p class="section__text">Here our some of the best the result when we build some buildings, houses, and also interior designs</p>
-			
 							<div class="works__gallery">
 								<img src="./assets/img/works/image-01.jpg" alt="" class="works__gallery-img img">
 								<img src="./assets/img/works/image-02.jpg" alt="" class="works__gallery-img img">
@@ -222,15 +209,11 @@
 								<img src="./assets/img/works/image-08.jpg" alt="" class="works__gallery-img img">
 								<img src="./assets/img/works/image-09.jpg" alt="" class="works__gallery-img img">
 							</div>
-			
 							<button class="btn btn--more btn--works" type="button">See more</button>
-			
 						</div>
 					</div>
 				</div>
-			
 			</section>
-	
 			<section class="section section--feedbacks">
 				<div class="feedbacks">
 					<div class="container">
@@ -257,7 +240,6 @@
 					</div>
 				</div>
 			</section>
-	
 			<section class="section section--partners">
 				<div class="partners">
 					<div class="container">
@@ -290,9 +272,7 @@
 							<div class="partners__video">
 								<div class="partners__video-preview">
 									<img class="img" src="./assets/img/partners/video-preview.jpg" alt="">
-			
 									<button class="btn btn--play" type="button"></button>
-			
 									<div class="partners__video-description">
 										<span>This is the timelapse video that shows how our teams work</span>
 									</div>
@@ -302,17 +282,15 @@
 					</div>
 				</div>
 			</section>
-	
 			<section class="section section--subscribe">
 				<div class="subscribe">
 					<div class="container">
 						<div class="subscribe__inner">
 							<h3 class="subscribe__tittle">Want to get our offer updates and news?</h3>
 							<p class="subscribe__text">Submit your e-mail and we will give you update about information and discount. Every single week. (not spamming)</p>
-			
 							<div class="subscribe__input-wrapper">
-								<form action="/">
-									<input type="email" name="email" placeholder="Enter your e-mail here">
+								<form class="subscribe__form" action="/">
+									<input type="email" name="email" placeholder="Enter your e-mail here" required>
 									<button class="btn btn--submit" type="submit">Submit</button>
 								</form>
 							</div>
@@ -320,15 +298,72 @@
 					</div>
 				</div>
 			</section>
-	
 		</main>
-	
+		<footer class="footer">
+			<div class="footer__main">
+				<div class="container container--footer">
+					<div class="footer__inner">
+						<div class="footer__logoside">
+							<div class="footer__logo"><a href="./index.html"><span class="footer__logo-text">DB-</span></a></div>
+							<p class="footer__address">Lizenzo street number 12<br>Jakarta, Indonesia</p>
+							<button class="btn btn--footer">Get directions</button>
+						</div>
+		
+						<div class="footer__sitemap">
+							<div class="footer__spoller-block" data-spollers="767,max" data-one-spoller>
+		
+								<div class="footer__spoller">
+									<button tabindex="-1" type="button" data-spoller class="footer__spoller-tittle">Menu</button>
+									<ul class="footer__spoller-list">
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Home</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">About</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Gallery</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Service</a></li>
+									</ul>
+								</div>
+		
+								<div class="footer__spoller">
+									<button tabindex="-1" type="button" data-spoller class="footer__spoller-tittle">Contact</button>
+									<ul class="footer__spoller-list">
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">E-mail</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Mobile</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Whatsapp</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Fax</a></li>
+									</ul>
+								</div>
+		
+								<div class="footer__spoller">
+									<button tabindex="-1" type="button" data-spoller class="footer__spoller-tittle">Career</button>
+									<ul class="footer__spoller-list">
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Job</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Part-time</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Internship</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Service</a></li>
+									</ul>
+								</div>
+		
+								<div class="footer__spoller">
+									<button tabindex="-1" type="button" data-spoller class="footer__spoller-tittle">Business</button>
+									<ul class="footer__spoller-list">
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Affiliate</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Collaboration</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">Investment</a></li>
+										<li class="footer__spoller-item"><a href="#" class="footer__spoller-link">People</a></li>
+									</ul>
+								</div>
+		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright">
+				<span>2021 - Copyright ZHB Studio</span>
+			</div>
+		</footer>
 	</div>
 	
-
-	<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
 	<script src="assets/js/app.min.js"></script>
-
 </body>
 
 </html>
