@@ -25,21 +25,25 @@ let path = {
 		js: "dist/assets/js/",
 		css: "dist/assets/css/",
 		vendor_css: "dist/assets/css/vendor",
-		images: "dist/assets/img/"
+		images: "dist/assets/img/",
+		favicon: "dist/"
 	},
 	src: {
 		html: "src/*.html",
 		js: "src/assets/js/**/*.js",
 		css: "src/assets/sass/style.scss",
 		vendor_css: "src/assets/css/vendor/*.css",
-		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
+		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
+		favicon: "src/*.{xml,webmanifest}"
 	},
 	watch: {
 		html: "src/**/*.html",
 		js: "src/assets/js/**/*.js",
 		css: "src/assets/sass/**/*.scss",
 		vendor_css: "src/assets/css/vendor/*.css",
-		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
+		images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
+		favicon: "src/*.{xml,webmanifest}"
+
 	},
 	clean: "./dist"
 }
@@ -154,6 +158,11 @@ function images() {
 		.pipe(dest(path.build.images));
 }
 
+function favicon() {
+	return src(path.src.favicon)
+		.pipe(dest(path.build.favicon));
+}
+
 function clean() {
 	return del(path.clean);
 }
@@ -164,9 +173,11 @@ function watchFiles() {
 	gulp.watch([path.watch.vendor_css], vendor_css);
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.images], images);
+	gulp.watch([path.watch.favicon], favicon);
+
 }
 
-const build = gulp.series(clean, gulp.parallel(html, vendor_css, css, js, images));
+const build = gulp.series(clean, gulp.parallel(html, vendor_css, css, js, images, favicon));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 
@@ -177,6 +188,7 @@ exports.css = css;
 exports.vendor_css = vendor_css;
 exports.js = js;
 exports.images = images;
+exports.favicon = favicon;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;

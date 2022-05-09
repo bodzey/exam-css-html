@@ -41,12 +41,16 @@
 		.section__tittle {
 			text-align: left;
 			color: $colorTwo;
+
+			@media screen and (max-width: 767px) {
+				text-align: center;
+			}
 		}
 		.section__text {
 			text-align: left;
 
-			@media screen and (max-width: 380px) {
-				margin-left: 0;
+			@media screen and (max-width: 767px) {
+				text-align: center;
 			}
 		}
 	}

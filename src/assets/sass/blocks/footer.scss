@@ -65,10 +65,15 @@
 	&__sitemap {
 		width: 100%;
 	}
+
 	&__spoller {
 		&-block {
 			display: flex;
 			justify-content: space-between;
+
+			&._init .footer__spoller-tittle:hover {
+				cursor: pointer;
+			}
 
 			&._init .footer__spoller-tittle::before,
 			&._init .footer__spoller-tittle::after {
@@ -81,17 +86,21 @@
 				transition: transform 0.3s ease;
 				transform: translateY(-50%);
 			}
+
 			&._init .footer__spoller-tittle::before {
 				transform: rotate(-40deg);
 				right: 2rem;
 			}
+
 			&._init .footer__spoller-tittle::after {
 				transform: rotate(40deg);
 				right: 3rem;
 			}
+
 			&._init .footer__spoller-tittle._active::before {
 				transform: rotate(40deg);
 			}
+
 			&._init .footer__spoller-tittle._active::after {
 				transform: rotate(-40deg);
 			}
@@ -126,7 +135,8 @@
 
 		&-list {
 			@media screen and (max-width: 767px) {
-				margin: 2rem 0;
+				padding: 0.5rem 0;
+				background-color: darken($colorOne, 5%);
 			}
 		}
 
@@ -135,7 +145,7 @@
 				margin-bottom: 1.6rem;
 
 				@media screen and (max-width: 767px) {
-					margin-bottom: 1rem;
+					margin-bottom: 0.5rem;
 				}
 			}
 		}
@@ -157,9 +167,10 @@
 				@include adaptiv-font(16, 14);
 
 				text-align: center;
-				padding: 1rem 0;
+				padding: 1.5rem 0;
 
-				border: 1px solid darken($colorOne, 1%);
+				border-top: 1.5px solid darken($colorOne, 6%);
+				border-bottom: 1.5px solid darken($colorOne, 6%);
 
 				&:hover,
 				&:active {
@@ -172,10 +183,12 @@
 
 	&__copyright {
 		font-size: 1.6rem;
+		@include adaptiv-font(16, 12);
 		line-height: 1.7;
 		text-align: center;
 		color: #434343;
 
 		padding: 3rem 0;
+		@include adaptiv-value(padding, 30, 10, 0);
 	}
 }

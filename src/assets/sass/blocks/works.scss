@@ -1,5 +1,9 @@
 .works {
 	padding-bottom: 50rem;
+
+	@media screen and (max-height: 500px) {
+		padding-bottom: 40rem;
+	}
 	&__inner {
 		display: flex;
 		justify-content: center;
