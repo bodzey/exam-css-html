@@ -1,5 +1,4 @@
 .subscribe {
-	padding-bottom: 10rem;
 	&__inner {
 		display: flex;
 		justify-content: center;
@@ -7,7 +6,8 @@
 		flex-direction: column;
 
 		padding: 5.5rem;
-
+		@include adaptiv-value(padding-left, 55, 10, 0);
+		@include adaptiv-value(padding-right, 55, 10, 0);
 		background: linear-gradient(360deg, rgba(2, 57, 87, 0.8) 0%, rgba(5, 96, 136, 0.8) 112.47%), url(../img/subscribe-bg.jpg);
 		background-position: center;
 		background-size: cover;
@@ -44,14 +44,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: stretch;
-
+		width: 100%;
 		flex: 1 1 100%;
 
 		input {
 			flex: 1 1 80%;
 			font-family: "Poppins", sans-serif;
 
-			padding: 1.8rem 3rem;
+			@include adaptiv-value(padding-left, 30, 10, 0);
+			@include adaptiv-value(padding-right, 30, 10, 0);
+			@include adaptiv-value(padding-top, 18, 5, 0);
+			@include adaptiv-value(padding-bottom, 18, 5, 0);
 
 			outline: none;
 
@@ -59,7 +62,9 @@
 				font-family: inherit;
 				font-weight: 500;
 				font-size: 1.4rem;
+				@include adaptiv-font(14, 12);
 				line-height: 1.7;
+				color: #434343;
 				opacity: 0.8;
 			}
 		}

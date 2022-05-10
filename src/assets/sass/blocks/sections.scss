@@ -38,6 +38,8 @@
 	}
 
 	&--feedbacks {
+		margin-bottom: 20rem;
+
 		.section__tittle {
 			text-align: left;
 			color: $colorTwo;
@@ -56,10 +58,20 @@
 	}
 
 	&--partners {
+		margin-bottom: 10rem;
 		.section__tittle {
+			flex-basis: 20%;
 			text-align: left;
 			margin-bottom: 0;
+
+			@media screen and (max-width: 767px) {
+				text-align: center;
+			}
 		}
+	}
+
+	&--subscribe {
+		@include adaptiv-value(padding-bottom, 100, 50, 0);
 	}
 
 	&__tittle {

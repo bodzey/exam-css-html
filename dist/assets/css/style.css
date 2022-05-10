@@ -155,8 +155,8 @@ button {
 
 .btn--play {
     display: block;
-    width: 10rem;
-    height: 10rem;
+    width: calc(50px + 50 * ((100vw - 320px) / 1120));
+    height: calc(50px + 50 * ((100vw - 320px) / 1120));
     padding: 0;
     background: #056088;
     border-radius: 50%;
@@ -174,7 +174,9 @@ button {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 20px 0 20px 30px;
+    border-top-width: calc(10px + 10 * ((100vw - 320px) / 1120));
+    border-bottom-width: calc(10px + 10 * ((100vw - 320px) / 1120));
+    border-left-width: calc(15px + 15 * ((100vw - 320px) / 1120));
     border-color: transparent transparent transparent #fff;
     position: absolute;
     top: 50%;
@@ -233,6 +235,10 @@ button {
     color: #fff;
 }
 
+.section--feedbacks {
+    margin-bottom: 20rem;
+}
+
 .section--feedbacks .section__tittle {
     text-align: left;
     color: #056088;
@@ -254,9 +260,25 @@ button {
     }
 }
 
+.section--partners {
+    margin-bottom: 10rem;
+}
+
 .section--partners .section__tittle {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
     text-align: left;
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .section--partners .section__tittle {
+        text-align: center;
+    }
+}
+
+.section--subscribe {
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 1120));
 }
 
 .section__tittle {
@@ -1164,7 +1186,6 @@ button {
 
 .feedbacks {
     margin-top: -40rem;
-    margin-bottom: 20rem;
 }
 
 @media screen and (max-height: 500px) {
@@ -1377,8 +1398,6 @@ button {
 }
 
 .partners {
-    display: none;
-    padding-top: 18rem;
     padding-bottom: 10rem;
 }
 
@@ -1395,6 +1414,19 @@ button {
     margin-bottom: 10rem;
 }
 
+@media screen and (max-width: 767px) {
+    .partners__inner-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: calc(30px + 70 * ((100vw - 320px) / 1120));
+    }
+}
+
 .partners__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1405,7 +1437,13 @@ button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 14.4rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .partners__content {
+        gap: 0;
+    }
 }
 
 .partners__link {
@@ -1449,14 +1487,21 @@ button {
 }
 
 .partners__video-description {
-    width: 41.6rem;
-    height: 13rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: calc(280px + 136 * ((100vw - 320px) / 1120));
+    height: calc(70px + 60 * ((100vw - 320px) / 1120));
     background: -o-linear-gradient(88.83deg, #023957 -19.65%, #056088 93.67%);
     background: linear-gradient(1.17deg, #023957 -19.65%, #056088 93.67%);
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
     padding-left: 5rem;
-    padding-right: 7rem;
+    padding-right: 5rem;
     position: absolute;
     bottom: -5%;
     right: 0;
@@ -1464,14 +1509,20 @@ button {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
-.partners__video-description span {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color: #fff;
+@media screen and (max-width: 639px) {
+    .partners__video-description {
+        position: sticky;
+        width: 100%;
+    }
 }
 
-.subscribe {
-    padding-bottom: 10rem;
+.partners__video-description span {
+    display: block;
+    max-width: 25rem;
+    font-size: 1.6rem;
+    font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
+    line-height: 1.8;
+    color: #fff;
 }
 
 .subscribe__inner {
@@ -1489,6 +1540,8 @@ button {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 5.5rem;
+    padding-left: calc(10px + 45 * ((100vw - 320px) / 1120));
+    padding-right: calc(10px + 45 * ((100vw - 320px) / 1120));
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(2, 57, 87, 0.8)), color-stop(112.47%, rgba(5, 96, 136, 0.8))), url(../img/subscribe-bg.jpg);
     background: -o-linear-gradient(bottom, rgba(2, 57, 87, 0.8) 0%, rgba(5, 96, 136, 0.8) 112.47%), url(../img/subscribe-bg.jpg);
     background: linear-gradient(360deg, rgba(2, 57, 87, 0.8) 0%, rgba(5, 96, 136, 0.8) 112.47%), url(../img/subscribe-bg.jpg);
@@ -1535,6 +1588,7 @@ button {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    width: 100%;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1545,7 +1599,10 @@ button {
     -ms-flex: 1 1 80%;
     flex: 1 1 80%;
     font-family: "Poppins", sans-serif;
-    padding: 1.8rem 3rem;
+    padding-left: calc(10px + 20 * ((100vw - 320px) / 1120));
+    padding-right: calc(10px + 20 * ((100vw - 320px) / 1120));
+    padding-top: calc(5px + 13 * ((100vw - 320px) / 1120));
+    padding-bottom: calc(5px + 13 * ((100vw - 320px) / 1120));
     outline: none;
 }
 
@@ -1553,7 +1610,9 @@ button {
     font-family: inherit;
     font-weight: 500;
     font-size: 1.4rem;
+    font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
     line-height: 1.7;
+    color: #434343;
     opacity: 0.8;
 }
 
@@ -1561,7 +1620,9 @@ button {
     font-family: inherit;
     font-weight: 500;
     font-size: 1.4rem;
+    font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
     line-height: 1.7;
+    color: #434343;
     opacity: 0.8;
 }
 
@@ -1569,7 +1630,9 @@ button {
     font-family: inherit;
     font-weight: 500;
     font-size: 1.4rem;
+    font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
     line-height: 1.7;
+    color: #434343;
     opacity: 0.8;
 }
 
@@ -1577,7 +1640,9 @@ button {
     font-family: inherit;
     font-weight: 500;
     font-size: 1.4rem;
+    font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
     line-height: 1.7;
+    color: #434343;
     opacity: 0.8;
 }
 
@@ -1585,7 +1650,9 @@ button {
     font-family: inherit;
     font-weight: 500;
     font-size: 1.4rem;
+    font-size: calc(12px + 2 * ((100vw - 320px) / 1120));
     line-height: 1.7;
+    color: #434343;
     opacity: 0.8;
 }
 

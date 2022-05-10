@@ -1,6 +1,4 @@
 .partners {
-	display: none;
-	padding-top: 18rem;
 	padding-bottom: 10rem;
 	&__inner-wrapper {
 		display: flex;
@@ -8,6 +6,12 @@
 		align-items: center;
 
 		margin-bottom: 10rem;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+			justify-content: center;
+			@include adaptiv-value(gap, 100, 30, 0);
+		}
 	}
 
 	&__content {
@@ -15,7 +19,11 @@
 		justify-content: space-between;
 		align-items: center;
 
-		gap: 14.4rem;
+		width: 100%;
+
+		@media screen and (max-width: 767px) {
+			gap: 0;
+		}
 	}
 
 	&__link {
@@ -41,14 +49,15 @@
 		}
 
 		&-description {
-			width: 41.6rem;
-			height: 13rem;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			@include adaptiv-value(width, 416, 280, 0);
+			@include adaptiv-value(height, 130, 70, 0);
 			background: linear-gradient(1.17deg, $colorOne -19.65%, $colorTwo 93.67%);
 
-			padding-top: 3.5rem;
-			padding-bottom: 3.5rem;
 			padding-left: 5rem;
-			padding-right: 7rem;
+			padding-right: 5rem;
 
 			position: absolute;
 			bottom: -5%;
@@ -56,8 +65,15 @@
 
 			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 
+			@media screen and (max-width: 639px) {
+				position: sticky;
+				width: 100%;
+			}
 			span {
+				display: block;
+				max-width: 25rem;
 				font-size: 1.6rem;
+				@include adaptiv-font(16, 12);
 				line-height: 1.8;
 				color: #fff;
 			}
