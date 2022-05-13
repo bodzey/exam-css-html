@@ -1,15 +1,16 @@
 .partners {
 	padding-bottom: 10rem;
 	&__inner-wrapper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: max-content auto;
+		gap: 10rem;
 
 		margin-bottom: 10rem;
 
 		@media screen and (max-width: 767px) {
-			flex-direction: column;
-			justify-content: center;
+			grid-template-rows: max-content 1fr;
+			grid-template-columns: 1fr;
 			@include adaptiv-value(gap, 100, 30, 0);
 		}
 	}
@@ -19,10 +20,16 @@
 		justify-content: space-between;
 		align-items: center;
 
+		gap: 2rem;
 		width: 100%;
 
 		@media screen and (max-width: 767px) {
 			gap: 0;
+		}
+		@media screen and (max-width: 639px) {
+			flex-direction: column;
+			flex-wrap: wrap;
+			gap: 5rem;
 		}
 	}
 

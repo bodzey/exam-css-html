@@ -57,7 +57,10 @@
 			@include adaptiv-value(padding-bottom, 18, 5, 0);
 
 			outline: none;
-
+			border: none;
+			border-radius: 0;
+			background-image: none;
+			background-color: #fff;
 			&::placeholder {
 				font-family: inherit;
 				font-weight: 500;
