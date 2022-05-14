@@ -1,0 +1,36 @@
+.about-page {
+	.article {
+		&--about {
+			padding: 2rem;
+			&:nth-child(even) {
+				color: #fff;
+			}
+		}
+
+		&__inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__img {
+			max-height: 48rem;
+			height: 100%;
+			max-width: 62rem;
+			width: 100%;
+
+			position: relative;
+
+			.img--posab {
+				width: 70%;
+				height: 50%;
+				border: 2rem solid #fff;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+
+				box-sizing: content-box;
+			}
+		}
+	}
+}

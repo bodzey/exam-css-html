@@ -116,6 +116,15 @@ button {
     }
 }
 
+.block-bg {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 96, 136, 0.9)), to(rgba(2, 57, 87, 0.9))), url(../img/block-bg.jpg);
+    background: -o-linear-gradient(top, rgba(5, 96, 136, 0.9) 0%, rgba(2, 57, 87, 0.9) 100%), url(../img/block-bg.jpg);
+    background: linear-gradient(180deg, rgba(5, 96, 136, 0.9) 0%, rgba(2, 57, 87, 0.9) 100%), url(../img/block-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* Blocks */
 .btn {
     font-size: 1.6rem;
@@ -233,12 +242,6 @@ button {
 .section--works {
     padding-top: calc(90px + 80 * ((100vw - 320px) / 1120));
     margin-top: -7rem;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 96, 136, 0.9)), to(rgba(2, 57, 87, 0.9))), url(../img/works-bg.jpg);
-    background: -o-linear-gradient(top, rgba(5, 96, 136, 0.9) 0%, rgba(2, 57, 87, 0.9) 100%), url(../img/works-bg.jpg);
-    background: linear-gradient(180deg, rgba(5, 96, 136, 0.9) 0%, rgba(2, 57, 87, 0.9) 100%), url(../img/works-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .section--works .section__tittle {
@@ -1968,4 +1971,44 @@ button {
     color: #434343;
     padding: 3rem 0;
     padding: calc(10px + 20 * ((100vw - 320px) / 1120));
+}
+
+/* Pages */
+.about-page .article--about {
+    padding: 2rem;
+}
+
+.about-page .article--about:nth-child(even) {
+    color: #fff;
+}
+
+.about-page .article__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.about-page .article__img {
+    max-height: 48rem;
+    height: 100%;
+    max-width: 62rem;
+    width: 100%;
+    position: relative;
+}
+
+.about-page .article__img .img--posab {
+    width: 70%;
+    height: 50%;
+    border: 2rem solid #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
 }
