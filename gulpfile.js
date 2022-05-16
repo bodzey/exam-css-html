@@ -154,7 +154,9 @@ function js() {
 
 function images() {
 	return src(path.src.images)
-		.pipe(imagemin())
+		.pipe(imagemin([
+			imagemin.mozjpeg({ quality: 50, progressive: true }),
+		]))
 		.pipe(dest(path.build.images));
 }
 
