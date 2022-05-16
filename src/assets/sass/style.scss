@@ -75,6 +75,12 @@ button {
 	min-height: 100%;
 	background-color: #fff;
 }
+
+.about-page,
+.services-page {
+	padding: 10rem 0;
+}
+
 .main {
 	flex: 1 1 auto;
 }
@@ -124,3 +130,4 @@ button {
 /* Pages */
 
 @import "pages/about";
+@import "pages/services";

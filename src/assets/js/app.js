@@ -25,7 +25,7 @@ $(function () {
 	// Header BG
 	// ================================
 	let header = $(".header");
-	let scrollChange = 5;
+	let scrollChange = 10;
 	$(window).scroll(function () {
 		let scroll = $(window).scrollTop();
 

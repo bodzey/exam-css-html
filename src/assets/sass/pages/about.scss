@@ -1,35 +1,99 @@
 .about-page {
 	.article {
-		&--about {
-			padding: 2rem;
-			&:nth-child(even) {
-				color: #fff;
-			}
-		}
+		color: #434343;
 
 		&__inner {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			gap: 16rem;
+			@include adaptiv-value(gap, 160, 50, 0);
+
+			@media screen and (max-width: 767px) {
+				flex-direction: column;
+			}
 		}
 
 		&__img {
-			max-height: 48rem;
-			height: 100%;
-			max-width: 62rem;
-			width: 100%;
+			flex: 1 1 50%;
 
-			position: relative;
+			&-wrapper {
+				max-width: 64rem;
+				width: 100%;
+
+				margin-bottom: 10rem;
+
+				position: relative;
+
+				& img:first-child {
+					height: 48rem;
+					width: 80%;
+
+					@media screen and (max-width: 767px) {
+						height: auto;
+					}
+				}
+			}
 
 			.img--posab {
 				width: 70%;
-				height: 50%;
+				height: 40%;
 				border: 2rem solid #fff;
+				@include adaptiv-value(border-width, 20, 10, 0);
 				position: absolute;
-				bottom: 0;
+				bottom: -15%;
 				right: 0;
 
 				box-sizing: content-box;
+			}
+		}
+		&__wrapper {
+			flex: 1 1 50%;
+			margin-bottom: 10rem;
+		}
+
+		&__tittle {
+			@include adaptiv-font(24, 16);
+			font-weight: 700;
+			line-height: 1.7;
+			color: $colorTwo;
+
+			margin-bottom: 1.6rem;
+
+			& span {
+				font-style: italic;
+				@include adaptiv-font(32, 24);
+				margin-left: 2rem;
+			}
+
+			@media screen and (max-width: 767px) {
+				text-align: center;
+			}
+		}
+
+		&__text {
+			@include adaptiv-font(16, 12);
+			font-weight: 400;
+			line-height: 1.7;
+
+			margin-bottom: 3.2rem;
+
+			@media screen and (max-width: 767px) {
+				padding: 0 5rem;
+				text-align: justify;
+			}
+		}
+
+		&--about {
+			padding: 2rem 0;
+
+			&:nth-child(even) {
+				color: #fff;
+
+				& .article__tittle {
+					color: #fff;
+				}
 			}
 		}
 	}
